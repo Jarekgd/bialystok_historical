@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Historical Bialystok | Interactive Historical Experience</title>
+  <meta name="description" content="Interactive online and VR reconstruction of historical Bialystok." />
+  <link rel="icon" href="assets/favicon.ico" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="site-shell">
+    
+<header class="topbar">
+  <a class="brand" href="index.html" data-i18n="brand">Historical Bialystok</a>
+  <button class="mobile-menu-button" data-menu-button data-i18n="menu">Menu</button>
+  <nav class="nav" data-nav>
+    <a href="index.html" data-i18n="navHome">Home</a>
+    <a href="play.html" data-i18n="navGame">Play</a>
+    <a href="index.html#vr-download" data-i18n="navDownload">Download</a>
+    <a href="chatbot/" data-i18n="askAi">Ask AI</a>
+    <a href="contact.html" data-i18n="navContact">Contact</a>
+    <a href="about-me.html" data-i18n="navAbout">About project</a>
+    <div class="lang" aria-label="Language selection">
+      <button type="button" data-lang-button="en">EN</button>
+      <button type="button" data-lang-button="pl">PL</button>
+    </div>
+  </nav>
+</header>
+
+
+    <section class="hero">
+      <div class="hero-content">
+        <p class="eyebrow" data-i18n="heroSmall">1930s interactive 3D city experience</p>
+        <h1 data-i18n="heroTitle">Bialystok</h1>
+        <p class="subtitle" data-i18n="heroSub">Explore a historical reconstruction of the city through an interactive online and VR experience.</p>
+
+        <div class="hero-buttons">
+          <a class="vintage-button" href="play.html" data-i18n="playGame">Play</a>
+          <a class="vintage-button" href="downloads/bialystokVR.apk" download data-i18n="vrDownloadButton">Download APK</a>
+          <a class="vintage-button secondary" href="chatbot/" data-i18n="askAi">Ask AI</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="game" class="section">
+      <p class="eyebrow" data-i18n="gameSmall">Online version</p>
+      <h2 class="section-title" data-i18n="gameTitle">Start the online experience</h2>
+
+      <p class="section-text" data-i18n="gameText">
+        Open the web version and explore the reconstruction directly in your browser.
+      </p>
+
+      <div class="game-launch-panel">
+        <p data-i18n="gameLaunchText">
+          Enter the reconstruction and explore the city from your browser.
+        </p>
+
+        <a class="vintage-button" href="play.html" data-i18n="openGameButton">Play</a>
+      </div>
+    </section>
+
+    <section id="vr-download" class="section">
+      <p class="eyebrow" data-i18n="vrSmall">Meta Quest version</p>
+      <h2 class="section-title" data-i18n="vrTitle">Install the VR experience</h2>
+      <p class="section-text" data-i18n="vrText">
+        Download the Android APK file and sideload it onto a Meta Quest headset using SideQuest or Meta Quest Developer Hub.
+      </p>
+
+      <div class="download-panel">
+        <div class="download-copy">
+          <h3 data-i18n="vrDownloadTitle">Bialystok VR APK</h3>
+          <p data-i18n="vrDownloadText">Use this file for Meta Quest installation.</p>
+          <a class="text-link" href="downloads/bialystokVR.apk" download data-i18n="vrTextLink">Direct APK link</a>
+        </div>
+
+        <a class="vintage-button" href="downloads/bialystokVR.apk" download data-i18n="vrDownloadButton">Download APK</a>
+      </div>
+
+      <ol class="install-steps">
+        <li data-i18n="vrStep1">Enable developer mode for your Meta Quest headset in the Meta Horizon mobile app.</li>
+        <li data-i18n="vrStep2">Connect the headset to your computer with a USB cable and allow USB debugging inside the headset.</li>
+        <li data-i18n="vrStep3">Open SideQuest or Meta Quest Developer Hub, then install the downloaded APK file.</li>
+        <li data-i18n="vrStep4">In the headset, open the app from the Unknown Sources section of the app library.</li>
+      </ol>
+    </section>
+
+<footer class="footer">
+  <p data-i18n="copyrightNotice">© 2026 Jaroslaw Glod</p>
+      <p data-i18n="footerText">Bialystok 1930s Historical Reconstruction</p>
+  <div class="footer-links">
+    <a href="chatbot/" data-i18n="askAi">Ask AI</a>
+    <a href="about-me.html" data-i18n="navAbout">About project</a>
+    <a href="contact.html" data-i18n="navContact">Contact</a>
+    <a href="cookies.html" data-i18n="navCookies">Cookies</a>
+    <a href="privacy.html" data-i18n="navPrivacy">Privacy</a>
+    <a href="accessibility.html" data-i18n="navAccess">Accessibility</a>
+    <a href="copyright.html" data-i18n="navCopyright">Copyright</a>
+  </div>
+</footer>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

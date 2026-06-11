@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>History Chatbot | Historical Bialystok</title>
+  <meta name="description" content="Prototype history chatbot for the Historical Bialystok project." />
+  <link rel="icon" href="../assets/favicon.ico" />
+  <link rel="stylesheet" href="../style.css" />
+  <link rel="stylesheet" href="chatbot.css" />
+</head>
+<body>
+  <div class="site-shell chatbot-shell">
+    
+<header class="topbar">
+      <a class="brand" href="../index.html">Historical Bialystok</a>
+  <button class="mobile-menu-button" data-menu-button>Menu</button>
+  <nav class="nav" data-nav>
+    <a href="../index.html">Home</a>
+    <a href="../play.html">Play</a>
+    <a href="../index.html#vr-download">Download</a>
+    <a href="../chatbot/">Ask AI</a>
+    <a href="../contact.html">Contact</a>
+    <a href="../about-me.html">About project</a>
+    <div class="lang" aria-label="Language selection">
+      <button type="button" data-lang-button="en">EN</button>
+      <button type="button" data-lang-button="pl">PL</button>
+    </div>
+  </nav>
+</header>
+
+    <main class="chatbot-layout" aria-labelledby="chatbot-title">
+      <section class="chatbot-intro">
+        <p class="eyebrow">History assistant prototype</p>
+        <h1 id="chatbot-title">Ask about Bialystok</h1>
+        <p class="subtitle">
+          A focused chatbot space for questions about the city, its communities, and the historical reconstruction.
+        </p>
+      </section>
+
+      <section class="chat-panel" aria-label="History chatbot">
+        <div class="chat-messages" id="chat-messages" aria-live="polite">
+          <article class="chat-message bot-message">
+            <p>
+              Ask me a question about historical Bialystok. I will answer carefully and say when I do not know.
+            </p>
+          </article>
+        </div>
+
+        <div class="suggested-questions" aria-label="Suggested questions">
+          <button type="button" data-question="What was Bialystok like before the Second World War?">Pre-war city</button>
+          <button type="button" data-question="Which communities lived in Bialystok in the 1930s?">Communities</button>
+          <button type="button" data-question="What happened to Bialystok during the war?">War history</button>
+        </div>
+
+        <form class="chat-form" id="chat-form">
+          <label for="chat-question">Question</label>
+          <textarea id="chat-question" name="question" rows="4" maxlength="500" required placeholder="Type your question..."></textarea>
+          <div class="chat-actions">
+            <p id="chat-status" class="chat-status" role="status"></p>
+            <button class="vintage-button" type="submit">Ask</button>
+          </div>
+        </form>
+      </section>
+    </main>
+
+    
+<footer class="footer">
+  <p>© 2026 Jaroslaw Glod</p>
+        <p>Bialystok 1930s Historical Reconstruction</p>
+  <div class="footer-links">
+    <a href="../chatbot/">Ask AI</a>
+    <a href="../about-me.html">About project</a>
+    <a href="../contact.html">Contact</a>
+    <a href="../cookies.html">Cookies</a>
+    <a href="../privacy.html">Privacy</a>
+    <a href="../accessibility.html">Accessibility</a>
+    <a href="../copyright.html">Copyright</a>
+  </div>
+</footer>
+  </div>
+
+  <script src="../script.js"></script>
+  <script src="chatbot.js?v=20260610-2"></script>
+</body>
+</html>

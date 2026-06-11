@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact | Historical Bialystok</title>
+  <meta name="description" content="Contact page for Historical Bialystok project." />
+  <link rel="icon" href="assets/favicon.ico" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="site-shell">
+    
+<header class="topbar">
+  <a class="brand" href="index.html" data-i18n="brand">Historical Bialystok</a>
+  <button class="mobile-menu-button" data-menu-button data-i18n="menu">Menu</button>
+  <nav class="nav" data-nav>
+    <a href="index.html" data-i18n="navHome">Home</a>
+    <a href="play.html" data-i18n="navGame">Play</a>
+    <a href="index.html#vr-download" data-i18n="navDownload">Download</a>
+    <a href="chatbot/" data-i18n="askAi">Ask AI</a>
+    <a href="contact.html" data-i18n="navContact">Contact</a>
+    <a href="about-me.html" data-i18n="navAbout">About project</a>
+    <div class="lang" aria-label="Language selection">
+      <button type="button" data-lang-button="en">EN</button>
+      <button type="button" data-lang-button="pl">PL</button>
+    </div>
+  </nav>
+</header>
+
+
+    <section class="page-hero">
+      <div>
+        <p class="eyebrow" data-i18n="contactSmall">Get in touch</p>
+        <h1 data-i18n="contactTitle">Contact</h1>
+      </div>
+    </section>
+
+    <main id="contact-form" class="section narrow">
+      <article class="paper">
+        <p class="form-status" data-contact-status hidden></p>
+
+        <form class="form-grid" action="send-contact.php" method="post">
+          <label>
+            <span data-i18n="name">Name</span>
+            <input type="text" name="name" autocomplete="name" required />
+          </label>
+
+          <label>
+            <span data-i18n="email">Email</span>
+            <input type="email" name="email" autocomplete="email" required />
+          </label>
+
+          <label>
+            <span data-i18n="message">Message</span>
+            <textarea name="message" required></textarea>
+          </label>
+
+          <button class="vintage-button" type="submit" data-i18n="sendDemo">Send message</button>
+        </form>
+      </article>
+    </main>
+
+    
+<footer class="footer">
+  <p data-i18n="copyrightNotice">© 2026 Jaroslaw Glod</p>
+      <p data-i18n="footerText">Bialystok 1930s Historical Reconstruction</p>
+  <div class="footer-links">
+    <a href="chatbot/" data-i18n="askAi">Ask AI</a>
+    <a href="about-me.html" data-i18n="navAbout">About project</a>
+    <a href="contact.html" data-i18n="navContact">Contact</a>
+    <a href="cookies.html" data-i18n="navCookies">Cookies</a>
+    <a href="privacy.html" data-i18n="navPrivacy">Privacy</a>
+    <a href="accessibility.html" data-i18n="navAccess">Accessibility</a>
+    <a href="copyright.html" data-i18n="navCopyright">Copyright</a>
+  </div>
+</footer>
+
+  </div>
+
+  <script src="script.js"></script>
+  <script>
+    (function () {
+      var status = document.querySelector("[data-contact-status]");
+      if (!status) return;
+
+      var contact = new URLSearchParams(window.location.search).get("contact");
+      var messages = {
+        sent: "Thank you. Your message has been sent.",
+        error: "Sorry, the message could not be sent. Please check the form and try again.",
+        validation: "Please complete all fields with a valid email address.",
+        config: "The contact form SMTP login is not configured yet. Add the IONOS mailbox settings in contact-config.php.",
+        mailerror: "The server could not send the email. Please check the IONOS mailbox settings.",
+        smtpconnect: "The server could not connect to smtp.ionos.com. Check whether SMTP connections are allowed on this hosting package.",
+        smtptls: "The server connected to IONOS but could not start TLS encryption.",
+        smtpauth: "IONOS rejected the SMTP login. Check the mailbox address and password.",
+        smtprejected: "IONOS rejected the email. Check that the sender mailbox exists and matches the SMTP login."
+      };
+
+      if (messages[contact]) {
+        status.hidden = false;
+        status.dataset.status = contact;
+        status.textContent = messages[contact];
+      }
+    }());
+  </script>
+</body>
+</html>

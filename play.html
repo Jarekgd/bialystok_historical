@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Play | Historical Bialystok</title>
+  <meta name="description" content="Play the Historical Bialystok WebGL experience." />
+  <link rel="icon" href="assets/favicon.ico" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="site-shell">
+    
+<header class="topbar">
+  <a class="brand" href="index.html" data-i18n="brand">Historical Bialystok</a>
+  <button class="mobile-menu-button" data-menu-button data-i18n="menu">Menu</button>
+  <nav class="nav" data-nav>
+    <a href="index.html" data-i18n="navHome">Home</a>
+    <a href="play.html" data-i18n="navGame">Play</a>
+    <a href="index.html#vr-download" data-i18n="navDownload">Download</a>
+    <a href="chatbot/" data-i18n="askAi">Ask AI</a>
+    <a href="contact.html" data-i18n="navContact">Contact</a>
+    <a href="about-me.html" data-i18n="navAbout">About project</a>
+    <div class="lang" aria-label="Language selection">
+      <button type="button" data-lang-button="en">EN</button>
+      <button type="button" data-lang-button="pl">PL</button>
+    </div>
+  </nav>
+</header>
+
+
+    <main class="section play-section">
+      <p class="eyebrow" data-i18n="gameSmall">Online version</p>
+      <h1 class="play-title" data-i18n="gameTitle">Start the online experience</h1>
+
+      <div class="game-wrap">
+        <iframe
+          class="game-frame"
+          src="game/index.html?v=20260610-3"
+        title="Historical Bialystok WebGL experience"
+          allow="fullscreen; autoplay; gamepad; xr-spatial-tracking">
+        </iframe>
+      </div>
+    </main>
+
+<footer class="footer">
+  <p data-i18n="copyrightNotice">© 2026 Jaroslaw Glod</p>
+      <p data-i18n="footerText">Bialystok 1930s Historical Reconstruction</p>
+  <div class="footer-links">
+    <a href="chatbot/" data-i18n="askAi">Ask AI</a>
+    <a href="about-me.html" data-i18n="navAbout">About project</a>
+    <a href="contact.html" data-i18n="navContact">Contact</a>
+    <a href="cookies.html" data-i18n="navCookies">Cookies</a>
+    <a href="privacy.html" data-i18n="navPrivacy">Privacy</a>
+    <a href="accessibility.html" data-i18n="navAccess">Accessibility</a>
+    <a href="copyright.html" data-i18n="navCopyright">Copyright</a>
+  </div>
+</footer>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
