@@ -1,0 +1,51 @@
+<Files "contact-config.php">
+  Require all denied
+</Files>
+
+<Files "contact-config.example.php">
+  Require all denied
+</Files>
+
+<Files "openai-config.php">
+  Require all denied
+</Files>
+
+<Files "openai-config.example.php">
+  Require all denied
+</Files>
+
+<Files "gemini-config.php">
+  Require all denied
+</Files>
+
+<Files "gemini-config.example.php">
+  Require all denied
+</Files>
+
+<IfModule mod_mime.c>
+  RemoveType .br
+  AddEncoding br .br
+  AddType application/javascript .js
+  AddType application/wasm .wasm
+  AddType application/octet-stream .data
+  AddType application/javascript .js.br
+  AddType application/wasm .wasm.br
+  AddType application/octet-stream .data.br
+</IfModule>
+
+<IfModule mod_headers.c>
+  <FilesMatch "\.data\.br$">
+    Header set Content-Encoding br
+    Header set Content-Type application/octet-stream
+  </FilesMatch>
+
+  <FilesMatch "\.framework\.js\.br$">
+    Header set Content-Encoding br
+    Header set Content-Type application/javascript
+  </FilesMatch>
+
+  <FilesMatch "\.wasm\.br$">
+    Header set Content-Encoding br
+    Header set Content-Type application/wasm
+  </FilesMatch>
+</IfModule>
